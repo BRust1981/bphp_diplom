@@ -1,3 +1,7 @@
+<?php
+  require 'init.php';
+  //echo AUTHORIZED_USERS['user1'];
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,32 +10,37 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Дипломный проект по курсу "Основы PHP"</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
-<body class="">
-    <header class="header">
-    </header>
+<body>
+  <header class="header">
+    <h1>Бюро переводов</h1>
+  </header>
   <div class="login" id="login">
-          <div class="dialog">
-              <div class="content">
-                  <div class="header">
-                      <h4 class="title">Вход</h4>
-                  </div>
-                  <div class="-body">
-                      <form class="form" id="login-form" action="../login.php" method="post">
-                          <div class="form-group">
-                              <input type="email" class="form-control" placeholder="E-mail" name="email" required>
-                          </div>
-                          <div class="form-group">
-                              <input type="password" class="form-control" placeholder="Пароль" name="password" required>
-                          </div>
-                      </form>
-                  </div>
-                  <div class="footer">
-                      <button type="submit" class="btn btn-primary" form="login-form">Войти</button>
-                  </div>
-              </div>
-          </div>
+    <div class="dialog">
+      <div class="content">
+
+        <div class="form-header">
+          <h2 class="title">Вход</h2>
+        </div>
+
+        <div class="login-body">
+          <form class="login-form" id="login-form" action="login.php" method="post">
+            <div class="form-group">
+              <input type="login" class="input-inner" placeholder="Логин" name="login" required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="input-inner" placeholder="Пароль" name="password" required>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn-submit">Войти</button>
+            </div>
+          </form>
+        </div>
+
+
       </div>
+    </div>
+  </div>
 </body>
 </html>
